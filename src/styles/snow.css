@@ -1,0 +1,54 @@
+/* Container สำหรับพื้นที่หิมะตก */
+.snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* ไม่รบกวนการคลิก */
+    z-index: 9999; /* แสดงบนสุด */
+    overflow: hidden; /* ป้องกันไม่ให้หิมะออกนอกหน้าจอ */
+  }
+  
+  /* ตัวหิมะ */
+  .snowflake {
+    position: relative;
+    top: -10px; /* เริ่มจากด้านบน */
+    color: white;
+    font-size: 1.5rem;
+    animation-name: fall, sway;
+    animation-duration: 10s, 3s; /* เวลาตกและแกว่ง */
+    animation-timing-function: linear, ease-in-out; /* การตกและแกว่งนุ่มนวล */
+    animation-iteration-count: infinite, infinite; /* ทำซ้ำตลอดเวลา */
+    opacity: 0.8; /* เพิ่มความโปร่งใสเล็กน้อย */
+    will-change: transform, opacity; /* ปรับประสิทธิภาพการเรนเดอร์ */
+  }
+  
+  /* การตกลงมาของหิมะ */
+  @keyframes fall {
+    0% {
+      transform: translateY(-10px); /* เริ่มจากด้านบน */
+      opacity: 1; /* เริ่มต้นมองเห็น */
+    }
+    100% {
+      transform: translateY(100vh); /* ตกลงมาจนถึงด้านล่าง */
+      opacity: 0.6; /* จางหายเล็กน้อยเมื่อใกล้พื้น */
+    }
+  }
+  
+  /* การแกว่งของหิมะ */
+  @keyframes sway {
+    0%, 100% {
+      transform: translateX(0); /* เริ่มจากตำแหน่งตรง */
+    }
+    25% {
+      transform: translateX(10px); /* แกว่งไปทางขวาเล็กน้อย */
+    }
+    50% {
+      transform: translateX(-10px); /* แกว่งไปทางซ้ายเล็กน้อย */
+    }
+    75% {
+      transform: translateX(15px); /* แกว่งกลับมาทางขวาเล็กน้อย */
+    }
+  }
+  

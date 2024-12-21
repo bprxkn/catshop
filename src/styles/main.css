@@ -1,0 +1,177 @@
+.cat-store-container {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: 'Kanit', sans-serif;
+  background-image: url('https://www.transparenttextures.com/patterns/snow.png');
+  background-repeat: repeat;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #2d3748;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f54b4b; /* สีแดง */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.add-cat-form {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 20px -3px rgba(0, 0, 0, 0.2);
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  border: 2px solid #2e7d32; /* สีเขียว */
+}
+
+.form-title {
+  color: #f54b4b;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.form-input {
+  padding: 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  background: #f9f9f9;
+}
+
+.form-input:focus {
+  border-color: #2e7d32; /* สีเขียว */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.3);
+}
+
+.form-textarea {
+  grid-column: span 2;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit-button {
+  background: #f54b4b; /* สีแดง */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.submit-button:hover {
+  background: #d32f2f;
+  transform: translateY(-1px);
+}
+
+.cats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.cat-card {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #2e7d32; /* สีเขียว */
+}
+
+.cat-card:hover {
+  transform: translateY(-5px);
+}
+
+/*.cat-card::before {
+  content: '🎅';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+}*/
+
+.cat-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2e7d32; /* สีเขียว */
+  margin-bottom: 0.5rem;
+}
+
+.cat-info {
+  color: #4a5568;
+  margin-bottom: 0.25rem;
+}
+
+.cat-description {
+  color: #718096;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.card-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.edit-button {
+  background: #ecc94b;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  flex: 1;
+}
+
+.delete-button {
+  background: #f56565;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  flex: 1;
+}
+
+.edit-button:hover {
+  background: #d69e2e;
+}
+
+.delete-button:hover {
+  background: #c53030;
+}
+
+.loading {
+  text-align: center;
+  color: #4a5568;
+  font-size: 1.2rem;
+  margin: 2rem 0;
+}
